@@ -1,0 +1,36 @@
+{
+  "name": "itboye/component_sdk_base",
+  "description": "for php sdk base",
+  "type": "library",
+  "license": "MIT",
+  "keywords": [
+    "hebidu"
+  ],
+  "minimum-stability": "dev",
+  "authors": [
+    {
+      "name": "hebidu",
+      "email": "hebiduhebi@126.com",
+      "role": "developer"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "by\\": "src/",
+      "byTest\\": "test/"
+    }
+  },
+  "repositories": {
+    "packagist": {
+      "type": "composer",
+      "url": "https://packagist.phpcomposer.com"
+    }
+  },
+  "require": {
+    "php": ">=5.6",
+  },
+  "require-dev": {
+    "php": ">=5.6",
+    "phpunit/phpunit": "6.2",
+  }
+}
