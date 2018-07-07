@@ -29,6 +29,12 @@ class ByCurlHelper
     private $alg;
     private $debug = true;
 
+    /**
+     * ByCurlHelper constructor.
+     * @param array $cfg
+     * @throws ByInvalidParamException
+     * @throws ByLackParamException
+     */
     function __construct($cfg = array())
     {
         if (!isset($cfg['by_api_gateway_uri']) || !isset($cfg['by_client_id'])
@@ -52,7 +58,6 @@ class ByCurlHelper
      * 发送请求
      * @param ByBaseReq $baseReq
      * @param string $api_url
-     * @return array|\by\infrastructure\base\CallResult
      * @internal param $data
      * @internal param $url
      * @internal param bool $is_debug
@@ -115,6 +120,8 @@ class ByCurlHelper
                 $r = ByResultHelper::fail($info);
             }
 
+        } else {
+            return ByResultHelper::fail($r['info']);
         }
 
         return $r;
