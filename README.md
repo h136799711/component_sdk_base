@@ -16,3 +16,4 @@ composer require itboye/component_sdk_base
 # 注意 
 
 1. 项目中有定义了 以BY开头的常量，所以使用者尽量避免使用BY作为命名的前缀
+2. 仅用于tp5.0的项目以及通讯算法是必须带itboye的
